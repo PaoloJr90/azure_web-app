@@ -6,6 +6,7 @@ const pool = new pg.Pool({
   database: "zoo_management",
   password: "jMBA#rnr!7p98jJ&",
   port: 5432,
+  ssl: true,
 });
 
 export default pool;
