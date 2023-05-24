@@ -2,10 +2,10 @@ import express from "express";
 import cookieParser from "cookie-parser";
 
 import db from "./db.js";
-import animalsRouter from "./routes/animals.js";
+import animalsRouter from "../routes/animals.js";
 // import enclosuresRouter from "./routes/enclosures.js";
 // import staffRouter from "./routes/staff.js";
-import signUpSignIn from "./routes/signInSignUp.js";
+import signUpSignIn from "../routes/signInSignUp.js";
 
 import authMiddleware from "./authMiddleware.js";
 
