@@ -4,7 +4,7 @@ const authMiddleware = async (req, res, next) => {
   const sessionId = req.cookies.session_id;
 
   if (!sessionId) {
-    res.status(401).json({ message: "Unauthorized" });
+    res.status(401).json({ message: "Unauthorized1" });
     return;
   }
 
@@ -15,8 +15,10 @@ const authMiddleware = async (req, res, next) => {
 
   const session = rows[0];
 
-  if (!session || new Date() > session.expires_at || !session.is_valid) {
-    res.status(401).json({ message: "Unauthorized" });
+  if (!session || new Date() > session.expires_at) {
+    // could add a check for is_valid here (example: if (!session || !session.is_valid)
+    // would need to add a column to the sessions table
+    res.status(401).json({ message: "Unauthorized2" });
     return;
   }
 
