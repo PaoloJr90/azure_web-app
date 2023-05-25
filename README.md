@@ -1,2 +1,2 @@
 # azure_web-app
-testing on Azure for workshop05 of YCIT031 - Databases for the Web
+Azure deployment (Web-App & PostgreSQL database) for workshop05 of YCIT031 - Databases for the Web
